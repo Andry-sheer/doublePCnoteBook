@@ -1,0 +1,56 @@
+@import 'fonts';
+@import 'reset';
+
+body {
+  height: 100vh;
+  padding: 180px 120px;
+  font-family: 'Oxygen';
+  font-weight: 700;
+  background: linear-gradient(500deg, #1a1919 0%, #ffffffcb 48%, #00b7ffe8 100%);
+}
+
+a {
+  display: block;
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+  color: #ff0000;
+}
+
+.par {
+  font-size: 30px;
+  color: #ffffff;
+  letter-spacing: 7px;
+}
+
+.contr {
+  padding: 20px 30px;
+  font-size: 23px;
+}
+
+.list {
+  color: #000000;
+  list-style:disc;
+  padding: 15px 25px;
+  font-size: 18px;
+}
+
+.but {
+  padding: 15px;
+  background: #00ff15;
+  border-radius: 12px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.but2 {
+  padding: 15px;
+  background: #ff0000;
+  border-radius: 12px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 700;
+}
