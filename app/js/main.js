@@ -53,8 +53,34 @@ ul.appendChild(li5).textContent = 'TEST combie ADD + TEXT';
 document.querySelector('#button1').style.background = 'blue'
 
 button1.addEventListener("mouseover", function(){
-  this.style.color = "white" });
+  this.style.color = "white", this.style.background = "black" });
 
-button1.addEventListener("mouseover", function(){
-  this.style.background = "black" });
+button1.addEventListener("mouseout", function(){
+  this.style.color = "black", this.style.background = "blue" });
 
+
+
+
+
+
+
+
+
+
+
+
+
+  
+// button1.addEventListener("mousedown", function(){
+//   this.style.background = "black" });
+
+// button1.addEventListener("mouseup", function(){
+//   this.style.background = "blue" });
+
+// const table = document.querySelector('table');
+// table.addEventListener('click', function(event){
+//   const target = event.target;
+//   if (target.tagName === 'TD'){
+//     target.classList.toggle('color')
+//   }
+// })
