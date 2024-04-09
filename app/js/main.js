@@ -1,30 +1,36 @@
-const login = document.querySelector('.bodyMain__button');
-const back = document.querySelector('.profile__buttonBack');
-const spContainer = document.querySelector('.spinnerContainer');
-const spin = document.querySelector('.spinner');
-const bodyContainer = document.querySelector('.bodyMain__container');
-const prContainer = document.querySelector('.profile__container');
-const email = document.querySelector('.bodyMain__email');
-const password = document.querySelector('.bodyMain__password');
 
 
-function moveToProfile(){
-  bodyContainer.style.display = 'none'
-  spContainer.style.display = 'flex';
-  spin.style.display = 'block';
-  setTimeout(() => {
-    location.href = 'myProfile.html'
-  }, 2000);
-  console.log(`e-mail = ${email.value} \npassword = ${password.value}`)
-};
 
-function moveToLogin(){
-  prContainer.style.display = 'none';
-  spContainer.style.display = 'flex';
-  spin.style.display = 'block';
-  setTimeout(() => {
-    history.back()
-  }, 2000);
-};
 
-console.log(`ScreenUser: \nWidth: ${window.innerWidth}px \nHeight: ${window.innerHeight}px`);
+document.querySelector('#submit_person').addEventListener('submit', function(event){
+  event.preventDefault();
+  // console.log('submit')
+  const formData = new FormData(this);
+  const formObject = {};
+
+  formData.forEach(function(value, key){
+    // console.log(value, key)
+    if (!formObject[key]) {
+      formObject[key] = value;
+    }
+    else {
+      formObject[key] = `${formObject[key]}, ${value}`
+    }
+})
+    
+console.log(formObject)
+
+  validate(formObject)
+})  
+
+  function validate(object){
+    
+    if (object.password.length < 8){
+      document.querySelector('.passError').style.display = 'block';
+      document.querySelector('#submit_person').style.height = '400px';
+    }
+  };
+
+
+
+

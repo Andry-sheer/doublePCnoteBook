@@ -11,24 +11,57 @@
 <body>
 	<section class="bodyMainSection">
 		<div class="bodyMain">
-			<div class="spinnerContainer">
-				<span class="spinner"></span>
-				<span class="loading">LOADING</span>
-			</div>
-			
 			<div class="bodyMain__container">
-					<h1 class="bodyMain__title">Welcome back</h1>
-					<h3 class="bodyMain__subTitle">Enter your Untitled account details.</h3>
-					<form method="" action="javascript:moveToProfile()">
-					<input required class="bodyMain__email" type="email" name="mail" id="mail" placeholder="e-mail">
-					<input required class="bodyMain__password" type="password" name="password" id="pass" placeholder="password">
-					<button class="bodyMain__button">Login</button>
-					</form>
-				</div>
+				<form class="bodyMain__form" id="submit_person">
+					<label>Full Name:
+						<input type="text" name="A-full_name">
+					</label><br>
+					
+					<label>Bird of day:
+						<input type="date" name="bird_day">
+					</label><br>
+
+					<div class="gender">
+						gender:
+						<label>
+							male:
+							<input type="radio" name="gender" value="male">
+						</label>
+						<label>
+							female:
+							<input type="radio" name="gender" value="female">
+						</label>
+					</div>
+
+					<label>adress:
+						<input type="text" name="adress">
+					</label><br>
+
+					<label>leng:
+						<label>UA
+							<input type="checkbox" name="leng" value="UA">
+						</label>
+						<label>EN
+							<input type="checkbox" name="leng" value="EN">
+						</label>
+					</label><br>
+						
+
+					<label>password:
+						<input type="password" name="password">
+						<div class="passError">password is low then 8 charters!</div>
+					</label><br>
+					<label>repeat password:
+						<input type="password" name="repeat_password">
+					</label><br>
+
+					<input type="submit" value="submit">
+				</form>
+			</div>
 		</div>
 	</section>
-	
-	<script src="js/main.min.js"></script>
-	
+
+<script src="js/main.min.js"></script>
 </body>
+
 </html>
