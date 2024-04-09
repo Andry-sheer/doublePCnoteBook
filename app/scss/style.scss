@@ -7,67 +7,74 @@ body {
   font-size: 18px;
   font-family: 'Oxygen';
   letter-spacing: 1px;
+  background-color: #F7F4F2;
 }
 
-
+a {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif 'montserat';
+  color: #373826;
+}
 
 //?=================== MAIN PAGE ==========================
 
-.bodyMain {
-  height: 100vh;
-  background: url('../images/city.jpg') center/cover no-repeat;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+.onlineStore {
 
-  &__container {
+  &_header {
     display: flex;
     justify-content: center;
+  }
+
+  &_header-container {
+    width: 1440px;
+    display: flex;
+    padding-top: 24px;
     align-items: center;
+    justify-content: space-between;
   }
 
-  &__form {
-    margin: calc(50vh - 175px) auto;
-    color: rgb(255, 255, 255);
-    background: rgba(0, 0, 0, 0.715);
-    padding: 15px;
-    border-radius: 12px;
-    width: 500px;
-    height: 350px;
+  &_spanLine-1 {
+    display: inline-block;
+    border-bottom: 5px solid black;
+    width: 80px;
   }
-}
 
-label {
-  font-size: 20px;
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-}
+  &_spanLine {
+    display: inline-block;
+    width: 221px;
+    border-bottom: 5px solid transparent;
+  }
 
-input {
-  border-radius: 12px;
-  border: none;
-  font-size: 15px;
-  padding: 5px 15px;
-  margin: 7px 0;
-}
+  &_logo {
+    background: url('../images/logo.svg') center;
+    width: 221px;
+    height: 91px;
+  }
 
-.radio {
-  width: 20px;
-  height: 20px;
-}
+  &_spanLine-2 {
+    display: inline-block;
+    border-bottom: 5px solid black;
+    width: 80px;
+  }
 
-.gender {
-  font-size: 20px;
-  font-weight: 700;
-}
+  &_header-list {
+    display: flex;
+    gap: 32px;
+    
+  }
 
-.passError {
-  display: none;
-  padding: 10px 0;
-  margin: 0 20px;
-  background: white;
-  border-radius: 30px;
-  color: rgb(255, 0, 0);
+  &_li {
+
+  }
+
+  &_header-list-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &_li-icon {
+    width: 30px;
+    height: 30px;
+  }
 }
