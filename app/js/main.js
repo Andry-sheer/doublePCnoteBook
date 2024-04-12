@@ -1,45 +1,69 @@
-
-
-
-
-// document.querySelector('#submit_person').addEventListener('submit', function(event){
-//   event.preventDefault();
-//   // console.log('submit')
-//   const formData = new FormData(this);
-//   const formObject = {};
-
-//   formData.forEach(function(value, key){
-//     // console.log(value, key)
-//     if (!formObject[key]) {
-//       formObject[key] = value;
-//     }
-//     else {
-//       formObject[key] = `${formObject[key]}, ${value}`
-//     }
-// })
-    
-// console.log(formObject)
-
-//   validate(formObject)
-// })  
-
-//   function validate(object){
-    
-//     if (object.password.length < 8){
-//       document.querySelector('.passError').style.display = 'block';
-//       document.querySelector('#submit_person').style.height = '400px';
-//     }
-//   };
+let pay = 0;
 const contImg = document.querySelector('.onlineStore__img-sliderContainer');
 const img1 = document.querySelector('.onlineStore__img1');
 const img2 = document.querySelector('.onlineStore__img2');
 const dottedOne = document.querySelector('.onlineStore__dotted-1');
 const dottedTwo = document.querySelector('.onlineStore__dotted-2');
-const catalog = document.querySelector('.onlineStore__catalog');
-const catalog2 = document.querySelector('.onlineStore__catalog-2');
+const price = document.querySelector('.onlineStore__price');
+const form = document.querySelector('.onlineStore__form');
+const formTitle = document.querySelector('.onlineStore__form-titlePayment');
+const buy = document.querySelector('.onlineStore__buy');
+const guds = document.querySelector('.onlineStore__guds');
+guds.textContent = 0;
+const removeGuds = document.querySelector('.onlineStore__remGuds');
+const addGuds = document.querySelector('.onlineStore__addGuds');
+const submitButton = document.querySelector('.onlineStore__submitButton');
+const errorMessage = document.querySelector('.onlineStore__errorContainer');
+const names = document.querySelector('#first_nameID');
 
+
+submitButton.addEventListener('click', sub);
+function sub(e){
+  e.preventDefault();
+  if (names.value <= "") {
+    errorMessage.style.display = 'flex';
+}
+}
+
+//?========= SHOW FORMS on click Button ===========================================
+buy.addEventListener('click', showForm);
+function showForm(){
+  form.style.display = 'flex';
+  formTitle.style.display = 'flex';
+  buy.style.display = 'none';
+  submitButton.style.justifyContent = 'center';
+  submitButton.textContent = 'Pay $' + pay;
+}
+
+//?====== REMOVE GUDS BUTTON =======================================
+removeGuds.addEventListener('click', gudsMinus);
+function gudsMinus(e){
+  e.preventDefault();
+  guds.textContent--;
+  submitButton.textContent = `Pay $${pay -= 9.99}`;
+  if (guds.textContent <= 0) {
+    submitButton.textContent = `Pay $${pay = 0}`;
+  }
+
+  if (guds.textContent <= 0) {
+    removeGuds.disabled = true;
+  }
+}
+
+//?====== ADD GUDS BUTTON =======================================
+addGuds.addEventListener('click', gudsAdd);
+function gudsAdd(e){
+  e.preventDefault();
+  guds.textContent++;
+  submitButton.textContent = `Pay $${pay += 9.99}`; 
+
+  if (guds.textContent >= 1) {
+  removeGuds.disabled = false;
+  }
+}
+
+//?===== ADD SLIDER + DOTTED SLIDER ==============================
 img1.addEventListener('click', nextSlide);
-
 function nextSlide () {
   setTimeout(() => {
     img1.style.display = 'none',
@@ -51,7 +75,6 @@ function nextSlide () {
 }
 
 img2.addEventListener('click', prevSlide);
-
 function prevSlide () {
   setTimeout(()=> {
     img1.style.display = 'block';
@@ -62,14 +85,5 @@ function prevSlide () {
   dottedTwo.style.background = 'transparent';
 }
 
-catalog.addEventListener('click', fontBolt);
 
-function fontBolt() {
-  catalog.style.font
-}
 
-catalog2.addEventListener('click', fontSemi);
-
-function fontSemi() {
-  catalog.style.font
-}

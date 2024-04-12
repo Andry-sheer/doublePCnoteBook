@@ -9,8 +9,31 @@ body {
   font-family: 'Montserrat';
   letter-spacing: 1px;
   background-color: #F7F4F2;
-  width: 1440px;
   margin: 0 auto;
+}
+
+label {
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+input {
+  margin-top: 8px;
+  width: 100%;
+  font-size: 16px;
+  padding: 14px 16px;
+  border: none;
+  width: 400px;
+  font-family: 'Montserrat';
+}
+
+select {
+  width: 400px;
+  height: 50px;
+  font-size: 16px;
+  padding: 14px 16px;
+  border: none;
+  margin-top: 8px;
 }
 
 a {
@@ -18,6 +41,8 @@ a {
   font-size: 18px;
   color: #373826;
 }
+
+
 
 //?=================== MAIN PAGE ==========================
 
@@ -55,15 +80,6 @@ a {
     top: 21px;
   }
 
-  &_spanLine-2 {
-    position: absolute;
-    right: 0;
-    top: 75px;
-    display: inline-block;
-    border-bottom: 2px solid #588077;
-    width: 1220px;
-  }
-
   &_header-list {
     display: flex;
     gap: 32px;
@@ -71,9 +87,9 @@ a {
     margin-right: 200px;
   }
 
-  &_li {
+  // &_li {
 
-  }
+  // }
 
   &_header-list-icons {
     display: flex;
@@ -108,16 +124,19 @@ a {
     margin: 0 16px;
   }
 
-  &__paragraph2 {
+  &__catalog-2 {
     font-weight: 700;
   }
 
   &__container-inner {
     display: flex;
+    position: relative;
   }
 
   &__img-sliderContainer {
     position: relative;
+    cursor: pointer;
+    height: 520px;
   }
 
   &__img1 {
@@ -156,6 +175,7 @@ a {
   &__containerDescription {
     margin-left: 72px;
     width: 680px;
+    text-align: left;
   }
 
   &__container-title {
@@ -180,26 +200,148 @@ a {
   }
 
   &__descript {
+    line-height: 150%;
     font-size: 16px;
     text-align: justify;
     width: 400px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
-  &__buy {
+  &__buy, &__submitButton {
     background: #588077;
     font-size: 20px;
     padding: 15px 48px;
     color: white;
     height: 50px;
+    width: 264px;
     display: flex;
     cursor: pointer;
     transition: linear .1s;
 
     &:active {
-      margin: 1px;
       box-shadow: 1px 1px 10px #2b8d78;
     }
   }
+
+  
+
+  &__form-titlePayment{
+    // display: flex;
+    display: none;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__form {
+    // display: flex;
+    display: none;
+    flex-flow: column;
+    gap: 12px;
+  }
+
+  &__guds-container {
+    display: flex;
+    width: 166px;
+    height: 46px;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  &__remGuds {
+    width: 46px;
+    height: 46px;
+    border: #2b8d78 2px solid;
+    color: #2b8d78;
+    background: url('../images/icons/fi_minus.svg') center/24px no-repeat;
+
+    &:disabled {
+      border: gray 2px solid;
+      background: url('../images/icons/fi_minusDis.svg') center/24px no-repeat;
+    }
+  }
+
+  &__guds {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  &__addGuds {
+    width: 46px;
+    height: 46px;
+    border: #2b8d78 2px solid;
+    color: #2b8d78;
+    background: url('../images/icons/fi_plus.svg') center/24px no-repeat;
+  }
+
+  &__pay-container {
+    display: flex;
+    width: 400px;
+    margin-top: 8px;
+    gap: 8px;
+    align-items: center;
+  }
+
+  &__cashClass {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+
+  &__cardClass {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+  }
+
+  &__pCash {
+    margin-right: 50px;
+  }
+
+  // &__pCard {
+  // }
+
+  &__note {
+    width: 400px;
+    height: 50px;
+    padding: 14px 16px;
+    font-size: 18px;
+    margin-top: 8px;
+    resize: none;
+    overflow: hidden;
+    border: none;
+    margin-bottom: 36px;
+    font-family: 'Montserrat';
+  }
+
+  &__errorContainer {
+    // display: flex;
+    display: none;
+    width: 465px;
+    height: 84px;
+    background-color: #AB4B4B;
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 0;
+    padding: 12px 24px;
+    gap: 12px;
+  }
+
+  &__errorImg {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__errorDiscription {
+    text-align: left;
+    line-height: 150%;
+  }
+
 }
 

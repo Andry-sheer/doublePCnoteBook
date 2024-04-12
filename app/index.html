@@ -42,8 +42,8 @@
 				<div class="onlineStore__img-sliderContainer">
 				<img class="onlineStore__img1" src="../images/Rectangle81.png" alt="#">
 				<img class="onlineStore__img2" src="../images/Rectangle82.png" alt="#">
-				<button class="onlineStore__dotted-1"></button>
-				<button class="onlineStore__dotted-2"></button>
+				<span class="onlineStore__dotted-1"></span>
+				<span class="onlineStore__dotted-2"></span>
 				</div>
 				<div class="onlineStore__containerDescription">
 
@@ -57,24 +57,75 @@
 						southern countries tree with aromatic 
 						wood. The essential oil of sandalwood 
 						has a strong antiseptic effect.</p>
+
+					<!-- FORMS -->
+					<h2 class="onlineStore__form-titlePayment">Payment Details</h2>
+					<br>
+					<form action="" class="onlineStore__form">
+						
+							<label>First Name <br>
+								<input id="first_nameID" type="text" name="first name" placeholder="Enter your first name">
+							</label>
+								
+							<label>Last Name <br>
+								<input id="last_nameID" type="text" name="last name" placeholder="Enter your last name">
+							</label>
+
+							<label>Patronymic <br>
+								<input id="PatronymicID" type="text" name="patronymic" placeholder="Enter your patronymic">
+							</label>
+
+							<label>City <br>
+							<select name="select_city">
+								<option value="select" selected>Select the city</option>
+								<option class="sit" value="city-1">Kyiv</option>
+								<option value="city-2">Lviv</option>
+								<option value="city-3">Kharkiv</option>
+								<option value="city-4">Ternopol</option>
+								<option value="city-5">Vinnica</option>
+							</select>
+							</label>
+
+							<label>NovaPost office <br>
+								<input id="novaID" type="text" name="NovaPost office" placeholder="Enter # NovaPost office">
+							</label>
+							
+							<label>Select the quantity
+								<div class="onlineStore__guds-container">
+									<button class="onlineStore__remGuds" disabled></button>
+									<div class="onlineStore__guds"></div>
+									<button class="onlineStore__addGuds"></button>
+								</div>
+							</label>
+
+							<label>Payment method <br>
+								<div class="onlineStore__pay-container">
+									<input class="onlineStore__cashClass" type="radio" name="method" id="cashID" value="Cash on">
+									<p class="onlineStore__pCash">Cash on delivery</p>
+									<input class="onlineStore__cardClass" type="radio" name="method" id="cardID">
+									<p class="onlineStore__pCard">Card payment</p>
+								</div>
+							</label>
+
+							<label>Note <br>
+								<textarea class="onlineStore__note" name="note_area" id="noteID" placeholder="Enter your note"></textarea>
+							</label>
+
+							<button class="onlineStore__submitButton" type="submit"></button>
+					</form>
+
+					
 					<button class="onlineStore__buy">Buy In One Click</button>
 				</div>
-					
+					<div class="onlineStore__errorContainer">
+						<img src="../images/icons/fi_alert-octagon.svg" alt="error" class="onlineStore__errorImg">
+						<p class="onlineStore__errorDiscription">All required fields must be correct to complete the order</p>
+					</div>
 			</div>
 			
 		</div>
 	</main>
-						<!-- FORMS 
-					<form action="" class="onlineStore__form">
-
-						<label>First Name
-							<input type="text" name="first_name">
-						</label>
-						<br>
-						<label>Last Name
-							<input type="text" name="first_name">
-						</label>
-					</form>-->
+						
 </section>
 	
 <script src="js/main.min.js"></script>
