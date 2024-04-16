@@ -1,4 +1,6 @@
 let pay = 0;
+const container = document.querySelector('.onlineStore__container');
+const containerOfBuy = document.querySelector('.containerOfBuy');
 const contImg = document.querySelector('.onlineStore__img-sliderContainer');
 const img1 = document.querySelector('.onlineStore__img1');
 const img2 = document.querySelector('.onlineStore__img2');
@@ -13,17 +15,32 @@ guds.textContent = 0;
 const removeGuds = document.querySelector('.onlineStore__remGuds');
 const addGuds = document.querySelector('.onlineStore__addGuds');
 const submitButton = document.querySelector('.onlineStore__submitButton');
+
+
 const errorMessage = document.querySelector('.onlineStore__errorContainer');
-const names = document.querySelector('#first_nameID');
+const errorDiscription = document.querySelector('.onlineStore__errorDiscription');
+
+const firstName = document.querySelector('#first_nameID');
+const lastName = document.querySelector('#last_nameID');
+const patronymic = document.querySelector('#patronymicID');
+const nova = document.querySelector('#novaID');
+
+submitButton.addEventListener('click', pageOfGuds);
+
+function pageOfGuds(event){
+  event.preventDefault();
+  container.style.display = 'none';
+  containerOfBuy.style.display = 'flex';
+  // errorMessage.style.display = 'flex';
+}
 
 
-submitButton.addEventListener('click', sub);
-function sub(e){
-  e.preventDefault();
-  if (names.value <= "") {
-    errorMessage.style.display = 'flex';
-}
-}
+
+
+
+
+
+
 
 //?========= SHOW FORMS on click Button ===========================================
 buy.addEventListener('click', showForm);
