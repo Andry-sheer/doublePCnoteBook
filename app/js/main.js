@@ -30,7 +30,7 @@ submitButton.addEventListener('click', pageOfGuds);
 function pageOfGuds(event){
   event.preventDefault();
   container.style.display = 'none';
-  containerOfBuy.style.display = 'flex';
+  containerOfBuy.style.display = 'block';
   // errorMessage.style.display = 'flex';
 }
 

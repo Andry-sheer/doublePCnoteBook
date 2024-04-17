@@ -3,13 +3,10 @@
 @import 'spinner';
 
 body {
-  text-align: center;
   font-size: 18px;
-  // font-family: 'Oxygen';
   font-family: 'Montserrat';
   letter-spacing: 1px;
   background-color: #F7F4F2;
-  margin: 0 auto;
 }
 
 label {
@@ -52,12 +49,13 @@ a {
 .onlineStore {
 
   &_header {
+    width: 1440px;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
   }
 
   &_header-container {
-    width: 1440px;
     display: flex;
     padding-top: 45px;
     align-items: center;
@@ -68,7 +66,11 @@ a {
   &_spanLine {
     display: inline-block;
     border-bottom: 2px solid #588077;
-    width: 100%;
+    width: 1536px;
+
+    @media (max-width: 1440px){
+      width: 1440px;
+    }
   }
 
   &_logo {
@@ -76,15 +78,15 @@ a {
     width: 221px;
     height: 91px;
     position: absolute;
+    margin-right: auto;
     left: 80px;
-    top: 21px;
+    top: 27px;
   }
 
   &_header-list {
     display: flex;
     gap: 32px;
-    margin-left: auto;
-    margin-right: 200px;
+    margin-left: 330px;
   }
 
   // &_li {
@@ -94,7 +96,8 @@ a {
   &_header-list-icons {
     display: flex;
     gap: 16px;
-    margin-right: 80px;
+    margin-left: 284px;
+    margin-right: 70px;
   }
 
   &_li-icon {
@@ -343,18 +346,12 @@ a {
     line-height: 150%;
   }
 
-  &__containerOfBuy {
-    display: none;
-    width: 1440px;
-    margin: 0 auto;
-    padding: 48px 80px;
-  }
-
-  &__orders {
-    display: none;
-    text-align: justify;
-    margin-bottom: 40px;
-  }
-
 }
+
+//?============= PAGE OF BUY =====================================
+
+
+
+
+
 
