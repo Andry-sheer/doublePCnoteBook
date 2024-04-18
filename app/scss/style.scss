@@ -7,6 +7,7 @@ body {
   font-family: 'Montserrat';
   letter-spacing: 1px;
   background-color: #F7F4F2;
+  line-height: 150%;
 }
 
 label {
@@ -70,6 +71,10 @@ a {
 
     @media (max-width: 1440px){
       width: 1440px;
+    }
+
+    @media (max-width: 1920px){
+      width: 1920px;
     }
   }
 
@@ -351,6 +356,121 @@ a {
 //?============= PAGE OF BUY =====================================
 
 
+.orders {
+
+  &__container {
+    width: 1440px;
+    padding: 48px 80px;
+    margin: 0 auto;
+    display: none;
+  }
+
+  &__title {
+    display: flex;
+    text-align: justify;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #373826;
+  }
+
+  &__title-in {
+    font-size: 18px;
+    font-weight: 600;
+    color: #373826;
+    margin-bottom: 8px;
+  }
+
+  &__container-in {
+    display: flex;
+    border: 2px solid black;
+    padding: 16px;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  // &__container-details {
+    
+  // }
+
+  &__title-cont {
+    display: flex;
+    font-size: 24px;
+    font-weight: 600;
+    color: #373826;
+  }
+
+  &__link {
+    font-size: 12px;
+    color: #588077;
+    text-decoration:underline;
+  }
+
+  &__number {
+    font-size: 22px;
+    margin: 0 10px;
+    color: #2b8d78;
+  }
+
+  &__par-label {
+    font-size: 12px;
+    color: #2b8d78;
+  }
+
+  &__price {
+    font-size: 32px;
+    font-weight: 600;
+    color: #588077;
+    margin-left: auto;
+  }
+
+  &__desk-cont {
+    margin-top: 8px;
+  }
+
+  &__desk-price {
+    font-size: 12px;
+    text-align: right;
+  }
+
+  &__span {
+    height: 2px;
+    width: 1020px;
+    background: #588077;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 12px 0;
+  }
+
+  &__span-container {
+    display: flex;
+    gap: 15px;
+    flex-flow: column;
+  }
+
+  &__lorm {
+    font-size: 12px;
+  }
+
+  &__button {
+    background: #588077;
+    font-size: 20px;
+    padding: 15px 48px;
+    color: white;
+    cursor: pointer;
+    transition: linear .1s;
+    margin: 0;
+
+    &:active {
+      box-shadow: 1px 1px 10px #2b8d78;
+    }
+  }
+}
 
 
 

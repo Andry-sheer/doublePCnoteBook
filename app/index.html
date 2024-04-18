@@ -46,12 +46,10 @@
 				<span class="onlineStore__dotted-2"></span>
 				</div>
 				<div class="onlineStore__containerDescription">
-
 					<div class="onlineStore__container-title">
 						<h1 class="onlineStore__title">Sandal Comb</h1>
 						<p class="onlineStore__price">$ 9,99</p>
 					</div>
-					
 					<p class="onlineStore__descript">
 						Our combsare made of sandalwood, a
 						southern countries tree with aromatic 
@@ -60,36 +58,35 @@
 
 
 
-
 					<h2 class="onlineStore__form-titlePayment">Payment Details</h2>
 					<br>
 					<form action="" class="onlineStore__form">
 						
 							<label>First Name <br>
-								<input id="first_nameID" type="text" name="first name" placeholder="Enter your first name">
+								<input required id="first_nameID" type="text" name="first name" placeholder="Enter your first name">
 							</label>
 								
 							<label>Last Name <br>
-								<input id="last_nameID" type="text" name="last name" placeholder="Enter your last name">
+								<input required id="last_nameID" type="text" name="last name" placeholder="Enter your last name">
 							</label>
 
 							<label>Patronymic <br>
-								<input id="patronymicID" type="text" name="patronymic" placeholder="Enter your patronymic">
+								<input required id="patronymicID" type="text" name="patronymic" placeholder="Enter your patronymic">
 							</label>
 
 							<label>City <br>
-							<select name="select_city">
+							<select name="select_city" id="citySet">
 								<option value="select" selected>Select the city</option>
-								<option value="city-1">Kyiv</option>
-								<option value="city-2">Lviv</option>
-								<option value="city-3">Kharkiv</option>
-								<option value="city-4">Ternopil</option>
-								<option value="city-5">Vinnica</option>
+								<option value="Kyiv">Kyiv</option>
+								<option value="Lviv">Lviv</option>
+								<option value="Kharkiv">Kharkiv</option>
+								<option value="Ternopil">Ternopil</option>
+								<option value="Vinnica">Vinnica</option>
 							</select>
 							</label>
 
 							<label>NovaPost office <br>
-								<input id="novaID" type="text" name="NovaPost office" placeholder="Enter # NovaPost office">
+								<input required id="novaID" type="text" name="NovaPost office" placeholder="Enter # NovaPost office">
 							</label>
 							
 							<label>Select the quantity
@@ -102,7 +99,7 @@
 
 							<label>Payment method <br>
 								<div class="onlineStore__pay-container">
-									<input class="onlineStore__cashClass" type="radio" name="method" id="cashID" value="Cash on">
+									<input class="onlineStore__cashClass" type="radio" name="method" id="cashID">
 									<p class="onlineStore__pCash">Cash on delivery</p>
 									<input class="onlineStore__cardClass" type="radio" name="method" id="cardID">
 									<p class="onlineStore__pCard">Card payment</p>
@@ -137,17 +134,21 @@
 			<div class="orders__container-details">
 				<div class="orders__title-cont">Sandal Comb 
 					<div class="orders__number">
-						<p class="orders__par-label">Items</p>
-					</div>
-				</div>
-				<p class="orders__desk-cont">Our combs are made of sandalwood, a southern countries tree wi.. <a href="#">See more</a></p>
+						</div>
+						<p class="orders__par-label"></p>
+					
+					<div class="orders__price"></div></div>
+				<p class="orders__desk-cont">Our combs are made of sandalwood, a southern countries tree wi.. <a class="orders__link" href="#">See more</a></p>
+				<p class="orders__desk-price"></p>
 				<span class="orders__span"></span>
+				<p class="orders__title-in">Recipient information</p>
+				<div class="orders__span-container"></div>
+				<p class="orders__lorm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 			</div>
 		</div>
-
+		<input class="orders__button" type="button" value="Continue Shopping">
 	</div>
 </section>
-
 </main>
 
 <script src="js/main.min.js"></script>
