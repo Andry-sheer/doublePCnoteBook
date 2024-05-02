@@ -10,6 +10,7 @@ body {
   line-height: 150%;
 }
 
+<<<<<<< HEAD
 .sectionMain {
   background: #F7F4F2;
 }
@@ -19,7 +20,64 @@ body {
   height: 900px;
   margin: 0 auto;
   background: rgb(62, 51, 71);
+=======
+
+.myMainContainer {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
 }
+
+  .myButton {
+  padding: 15px 20px;
+  background: orange;
+  color: rgb(25, 0, 255);
+  transition: all .3s;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  font-weight: 700;
+
+  &:active {
+    background: rgb(118, 79, 8);
+  }
+
+  }
+
+.myContainer {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+		&__1 {
+      background: greenyellow;
+      border-radius: 24px;
+      padding: 20px;
+		}
+
+		&__2 {
+      border-radius: 24px;
+      background: orange;
+      padding: 20px;
+		}
+}
+
+tr, td {
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+}
+
+.button-1, .button-2 {
+  padding: 5px;
+  border-radius: 12px;
+  background: yellowgreen;
+  margin: 5px;
+>>>>>>> a1382ef0b4d1b6727ab153b8698ee471e948414b
+}
+
+
 
 
 

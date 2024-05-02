@@ -9,26 +9,169 @@
 </head>
 
 <body>
-	<section class="bodyMainSection">
-		<div class="bodyMain">
-			<div class="spinnerContainer">
-				<span class="spinner"></span>
-				<span class="loading">LOADING</span>
+<section class="onlineStoreHeaderSection">
+		<header class="onlineStore_header">
+			<div class="onlineStore_header-container">
+				<div class="onlineStore_logo"></div>
+				<ul class="onlineStore_header-list">
+					<li class="onlineStore_li"><a href="#">CATALOG</a></li>
+					<li class="onlineStore_li"><a href="#">TOP SELLERS</a></li>
+					<li class="onlineStore_li"><a href="#">ABOUT US</a></li>
+					<li class="onlineStore_li"><a href="#">FOR CUSTOMERS</a></li>
+				</ul>
+				<ul class="onlineStore_header-list-icons">
+					<li class="onlineStore_li-icon"><img src="../images/icons/fi_search.svg" alt="#"></li>
+					<li class="onlineStore_li-icon"><img src="../images/icons/fi_heart.svg" alt="#"></li>
+					<li class="onlineStore_li-icon"><img src="../images/icons/fi_user.svg" alt="#"></li>
+					<li class="onlineStore_li-icon"><img src="../images/icons/u_shopping-basket.svg" alt="#"></li>
+				</ul>
 			</div>
-			
-			<div class="bodyMain__container">
-					<h1 class="bodyMain__title">Welcome back</h1>
-					<h3 class="bodyMain__subTitle">Enter your Untitled account details.</h3>
-					<form method="" action="javascript:moveToProfile()"> <!-- action="javascript:moveToProfile()" -->
-					<input required class="bodyMain__email" type="email" name="mail" id="mail" placeholder="e-mail">
-					<input required class="bodyMain__password" type="password" name="password" id="pass" placeholder="password">
-					<button class="bodyMain__button">Login</button>
-					</form>
+		</header>
+		<span class="onlineStore_spanLine"></span>
+</section>
+	
+<main>
+	<section class="onlineStoreBodySection">
+		<div class="onlineStore__container">
+			<div class="onlineStore__p-cont"> 
+				<a href="#" class="onlineStore__catalog">Catalog</a>
+				<p class="onlineStore__paragraph">/</p>
+				<a href="#" class="onlineStore__catalog-2">Sandal comb</a>
+			</div>
+			<div class="onlineStore__container-inner">
+				<div class="onlineStore__img-sliderContainer">
+				<picture><source srcset="../images/Rectangle81.webp" type="image/webp"><img class="onlineStore__img1" src="../images/Rectangle81.png" alt="#"/></picture>
+				<picture><source srcset="../images/Rectangle82.webp" type="image/webp"><img class="onlineStore__img2" src="../images/Rectangle82.png" alt="#"/></picture>
+				<span class="onlineStore__dotted-1"></span>
+				<span class="onlineStore__dotted-2"></span>
 				</div>
+				<div class="onlineStore__containerDescription">
+					<div class="onlineStore__container-title">
+						<h1 class="onlineStore__title">Sandal Comb</h1>
+						<p class="onlineStore__price">$ 9,99</p>
+					</div>
+					<p class="onlineStore__descript">
+						Our combsare made of sandalwood, a
+						southern countries tree with aromatic 
+						wood. The essential oil of sandalwood 
+						has a strong antiseptic effect.</p>
+
+
+
+					<h2 class="onlineStore__form-titlePayment">Payment Details</h2>
+					<br>
+					<form class="onlineStore__form" id="formID" method="post">
+						
+							<label>First Name <br>
+								<input id="first_nameID" class="clsss_name" type="text" name="name" placeholder="Enter your first name">
+							</label>
+								
+							<label>Last Name <br>
+								<input id="last_nameID" type="text" name="last_name" placeholder="Enter your last name" >
+							</label>
+
+							<label>Patronymic <br>
+								<input id="patronymicID" type="text" name="patronymic" placeholder="Enter your patronymic" >
+							</label>
+
+							<label>e-mail <br>
+								<input id="emailID" class="class_email" type="email" name="email" placeholder="Enter @ e-mail" >
+							</label>
+
+							<label>City <br>
+							<select name="city" id="cityID" >
+								<option value="" disabled selected>Select the city</option>
+								<option value="Kyiv">Київ</option>
+								<option value="Lviv">Львів</option>
+								<option value="Kharkiv">Харків</option>
+								<option value="Ternopil">Тернопіль</option>
+								<option value="Vinnica">Вінниця</option>
+							</select>
+							</label>
+
+							<label>phone number <br>
+								<input id="phoneID" class="class_phone" type="tel" name="phone" placeholder="Enter # phone" >
+							</label>
+
+							<label>NovaPost office <br>
+								<input id="novaID" type="number" name="NovaPost_office" placeholder="Enter # NovaPost office" >
+							</label>
+							
+							<label>Select the quantity
+								<div class="onlineStore__guds-container">
+									<button class="onlineStore__remGuds" disabled></button>
+									<div class="onlineStore__guds" id="gudsID"></div>
+									<button class="onlineStore__addGuds"></button>
+								</div>
+							</label>
+
+							<label>Payment method <br>
+								<div class="onlineStore__pay-container">
+									<input  class="onlineStore__cashClass" type="radio"  name="pay_method" value="Cash on delivery" id="cashID">
+									<p class="onlineStore__pCash">Cash on delivery</p>
+									<input class="onlineStore__cardClass" type="radio" name="pay_method" value="Card payment" id="cardID">
+									<p class="onlineStore__pCard">Card payment</p>
+								</div>
+							</label>
+
+							<label>Note <br>
+								<textarea class="onlineStore__note" name="note" id="noteID" placeholder="Enter your note"></textarea>
+							</label>
+
+							<button class="onlineStore__submitButton" type="submit"></button>
+					</form>
+
+					
+					<button type="button" class="onlineStore__buy">Buy In One Click</button>
+				</div>
+					<div class="onlineStore__errorContainer">
+						<img src="../images/icons/fi_alert-octagon.svg" alt="error" class="onlineStore__errorImg">
+						<p class="onlineStore__errorDiscription">All required fields must be correct to complete the order</p>
+					</div>
+			</div>
 		</div>
 	</section>
 
-	<script src="js/main.min.js"></script>
-	
+
+<section class="orders">
+	<div class="orders__container">
+		<p class="orders__title">My Orders</p>
+
+		<div class="orders__container-in">
+			<picture><source srcset="../images/Rectangle81.webp" type="image/webp"><img src="../images/Rectangle81.png" alt="#" class="orders__img"/></picture>
+			<div class="orders__container-details">
+				<div class="orders__title-cont">Sandal Comb 
+					<div class="orders__number">
+						</div>
+						<p class="orders__par-label"></p>
+					
+					<div class="orders__price"></div>
+				</div>
+				<p class="orders__desk-cont">Our combs are made of sandalwood, a southern countries tree wi.. <a class="orders__link" href="#">See more</a></p>
+				<p class="orders__desk-price"></p>
+				<span class="orders__span"></span>
+				<p class="orders__title-in">Recipient information</p>
+				<div class="orders__orderContainer">
+					<p class="p1"></p>
+					<p class="p2"></p>
+					<p class="p3"></p>
+					<p class="p4"></p>
+					<p class="p5"></p>
+					<p class="p6"></p>
+					<p class="p7"></p>
+					<p class="p8"></p>
+					<p class="p9"></p>
+					<p class="p10"></p>
+				</div>
+				<p class="orders__lorm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+			</div>
+		</div>
+		<input class="orders__button" type="button" value="Continue Shopping">
+	</div>
+</section>
+</main>
+
+<script src="js/main.min.js"></script>
 </body>
+
 </html>
