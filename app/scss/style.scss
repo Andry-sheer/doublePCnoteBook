@@ -35,11 +35,10 @@ body {
 .myContainer {
 
   display: flex;
-  flex-flow: column;
+  flex-flow: column-reverse;
   align-items: center;
   justify-content: center;
   gap: 25px;
-  
 
 		&__1 {
       background: #C4E0B2;
@@ -61,8 +60,7 @@ body {
       border-radius: 24px;
       background: #9CC2E5;
       padding: 20px 15px;
-      padding-top: 5px;
-      
+      padding: 20px;
     }
 }
 
