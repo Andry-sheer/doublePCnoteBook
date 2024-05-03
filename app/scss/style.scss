@@ -12,13 +12,13 @@ body {
 
 
 .myMainContainer {
-  padding: 50px;
-  display: flex;
-  justify-content: center;
+  padding: 20px 50px;
+  text-align: center;
+  margin: 0 auto;
 }
 
   .myButton {
-  padding: 15px 20px;
+  padding: 5px 20px;
   background: orange;
   color: rgb(25, 0, 255);
   transition: all .3s;
@@ -27,7 +27,7 @@ body {
   font-weight: 700;
 
   &:active {
-    background: rgb(118, 79, 8);
+    background: rgb(165, 111, 12);
   }
 
   }
@@ -35,39 +35,50 @@ body {
 .myContainer {
 
   display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
   gap: 25px;
-  padding: 50px;
   
 
 		&__1 {
       background: #C4E0B2;
-      border-radius: 65px;
-      padding: 10px;
+      border-radius: 70px;
+      padding: 20px 15px;
+      padding-top: 5px;
+      width: 984px;
 		}
 
 		&__2 {
-      border-radius: 65px;
-      background: orange;
-      padding: 30px;
+      border-radius: 70px;
+      background: #FFE499;
+      padding: 20px 15px;
+      padding-top: 5px;
+      width: 630px;
 		}
+
+    &__3 {
+      border-radius: 24px;
+      background: #9CC2E5;
+      padding: 20px 15px;
+      padding-top: 5px;
+      
+    }
 }
 
 table {
   text-align: center;
-
 }
 
 td {
   width: 100%;
-  height: 40px;
   padding: 10px;
   border-left: 2px solid white;
 
   &:nth-child(1){
   border-left: none;
-}
+  }
+
 }
 
 tr {
@@ -79,15 +90,30 @@ tr {
 }
 
 
-.button-1, .button-2 {
-  padding: 15px 20px;
-  border-radius: 12px;
-  font-size: 18px;
-  background: rgb(132, 175, 44);
-  margin: 5px;
+.button-1, .button-2, .button-3, .button-4 {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border:1px solid #9bb88a;
+  background: #C4E0B2;
+  font-size: 25px;
+  transition: all .3s;
 }
 
 
+.button-1, .button-2 {
+  &:active {
+    background: #9bb88a;
+  }
+}
 
+.button-3, .button-4 {
+
+  border:1px solid #c0ac75;
+  background: #FFE499;
+
+  &:active {
+    background: #c0ac75;
+  }
+}
 
 
