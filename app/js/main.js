@@ -1,65 +1,55 @@
 
 
 class Human {
-  constructor (name, gender){
+  constructor(name, gender) {
     this.name = name;
-    this.gender = gender
+    this.gender = gender;
   }
 }
 
-class Apartament {
-    constructor () {
-      this.resident = [];
-    }
-
-    addResident(person) {
-      this.resident.push(person);
-    }
+class Apartment {
+  constructor() {
+    this.residents = [];
   }
 
+  addResident(person) {
+    this.residents.push(person);
+  }
+}
 
-/*
-  class Human {
-    constructor(name, gender) {
-      this.name = name;
-      this.gender = gender;
+class Building {
+  constructor(maxApartments) {
+    this.apartments = [];
+    this.maxApartments = maxApartments;
+  }
+
+  addApartment(apartment) {
+    if (this.apartments.length < this.maxApartments) {
+      this.apartments.push(apartment);
+    } else {
+      console.log("reach max apartments in Building");
     }
   }
-  
-  class Apartment {
-    constructor() {
-      this.residents = [];
-    }
-  
-    addResident(person) {
-      this.residents.push(person);
-    }
-  }
-  
-  class Building {
-    constructor(maxApartments) {
-      this.apartments = [];
-      this.maxApartments = maxApartments;
-    }
-  
-    addApartment(apartment) {
-      if (this.apartments.length < this.maxApartments) {
-        this.apartments.push(apartment);
-      } else {
-        console.log("Досягнуто максимальну кількість квартир у будинку.");
-      }
-    }
-  }
-  
-  // Приклад використання
-  const person1 = new Human("Іван", "чоловіча");
-  const person2 = new Human("Марія", "жіноча");
-  
-  const apartment1 = new Apartment();
-  apartment1.addResident(person1);
-  apartment1.addResident(person2);
-  
-  const building = new Building(5);
-  building.addApartment(apartment1);
-  
-  console.log(building);*/
+}
+
+
+const person1 = new Human("John", "male");
+const person2 = new Human("Emili", "female");
+const person3 = new Human("Aron", "male");
+const person4 = new Human("Casey", "female");
+const person5 = new Human("Kim", "female");
+// const person6 = new Human("Rose", "female");
+
+const apartment1 = new Apartment();
+apartment1.addResident(person1);
+apartment1.addResident(person2);
+apartment1.addResident(person3);
+apartment1.addResident(person4);
+apartment1.addResident(person5);
+// apartment1.addResident(person6);
+
+const building = new Building(5);
+building.addApartment(apartment1);
+
+console.log(building);
+
