@@ -1,6 +1,0 @@
-
-const myButton = document.querySelector('.myButton');
-
-myButton.style.borderRadius = '4px';
-
-myButton.textContent = 'Миттєві/Годинні/Добові';
